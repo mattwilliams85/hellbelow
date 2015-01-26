@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <div class="row">
+    <div class="large-4 columns" style="padding-left:0 !important;padding-top:20px">
+     <img alt="#" src="/assets/title.png" />
+    </div>
+    <div class="nav-div one">
+      <span class="nav-link">COMMAND</span>
+    </div>
+    <div class="nav-div two">
+      <span class="nav-link">SURVEILLANCE</span>
+    </div>
+    <div class="nav-div three">
+      <span class="nav-link">ANALYSIS</span>
+    </div>
+    <div class="nav-div four">
+      <span class="nav-link" style="padding-left:5px">BRIEFING</span>
+    </div>
+    <hr>
+  </div>
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
+
+<style type="text/css">
+  body {
+    background-image:#F4EECE;
+    background-image:url("assets/ricepaper2.png")
+  }
+
+  .title {
+    font-size:2.5em;
+    color:#cc2222;
+    font-family:'Inconsolata';
+    cursor:pointer;
+  }
+
+  .nav-link {
+    font-size:1.6em;
+    color:#333;
+    text-align:center;
+    cursor:pointer;
+    font-family:'Inconsolata';
+   -webkit-transition: opacity 2s ease-in;
+   -moz-transition: opacity 2s ease-in;
+   -o-transition: opacity 2s ease-in;
+   -ms-transition: opacity 2s ease-in;
+   transition: opacity 2s ease-in;
+  }
+
+
+  .nav-div {
+    padding-top:76px;
+    float:left;
+    margin-left:45px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font: 300 100% 'Helvetica Neue', Helvetica, Arial;
+  }
+
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  span {
+    display: inline-block;
+    width: 25%;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .two:hover ~ hr {
+    margin-left: 53%;
+  }
+
+  .three:hover ~ hr {
+    margin-left: 71%;
+  }
+
+  .four:hover ~ hr {
+    margin-left: 86%;
+  }
+
+  hr {
+    height: .25rem;
+    width: 11%;
+    margin: 0;
+    background: #444;
+    border: none;
+    margin-left: 37%;
+    transition: .3s ease-in-out;
+  }
+</style>
+
+<script type="text/javascript"></script>
